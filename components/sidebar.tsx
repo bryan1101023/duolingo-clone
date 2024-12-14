@@ -32,7 +32,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
       <div className="flex flex-1 flex-col gap-y-2">
         <SidebarItem label="Τα μαθήματα μου" href="/learn" iconSrc="/learn.svg" />
         <SidebarItem
-          label="Οι καλύτεροι lingoΜαθητές"
+          label="LingoΜαθητές"
           href="/leaderboard"
           iconSrc="/leaderboard.svg"
         />
