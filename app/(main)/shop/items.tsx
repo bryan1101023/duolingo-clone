@@ -27,18 +27,18 @@ export const Items = ({
     if (pending || hearts === MAX_HEARTS || points < POINTS_TO_REFILL) return;
 
     startTransition(() => {
-      refillHearts().catch(() => toast.error("Something went wrong."));
+      refillHearts().catch(() => toast.error("Ωχ οχι! Ο Lingo πάτησε ένα λάθος κουμπί και τώρα υπάρχει πρόβλημα! Δοκίμασε ξανά αργότερα."));
     });
   };
 
   const onUpgrade = () => {
-    toast.loading("Redirecting to checkout...");
+    toast.loading("Αγορά συνδρομής...");
     startTransition(() => {
       createStripeUrl()
         .then((response) => {
           if (response.data) window.location.href = response.data;
         })
-        .catch(() => toast.error("Something went wrong."));
+        .catch(() => toast.error("Ωχ οχι! Ο Lingo πάτησε ένα λάθος κουμπί και τώρα υπάρχει πρόβλημα! Δοκίμασε ξανά αργότερα."));
     });
   };
 
