@@ -7,5 +7,5 @@ export const Footer = () => {
         </p>
       </div>
     </div>
-    };
-);
+  );
+};
