@@ -44,11 +44,11 @@ export const HeartsModal = () => {
           </div>
 
           <DialogTitle className="text-center text-2xl font-bold">
-            You ran out of hearts!
+            Σου τελείωσαν τα lingohearts!
           </DialogTitle>
 
           <DialogDescription className="text-center text-base">
-            Get Pro for unlimited hearts, or purchase them in the store.
+           Μπορείς να "αγοράσεις" lingohearts χρησιμοποιώντας την πρόοδο σου (XP) στο Κατάστημα
           </DialogDescription>
         </DialogHeader>
 
@@ -60,7 +60,7 @@ export const HeartsModal = () => {
               size="lg"
               onClick={onClick}
             >
-              Get unlimited hearts
+              Πήγενε στο κατάστημα
             </Button>
 
             <Button
@@ -69,7 +69,7 @@ export const HeartsModal = () => {
               size="lg"
               onClick={close}
             >
-              No thanks
+            Όχι ευχαριστώ1
             </Button>
           </div>
         </DialogFooter>
