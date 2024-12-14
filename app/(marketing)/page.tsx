@@ -1,4 +1,5 @@
 import {
+  Waitlist,
   ClerkLoaded,
   ClerkLoading,
   SignInButton,
@@ -39,7 +40,7 @@ export default function MarketingPage() {
                 <Button size="lg" variant="secondary" className="w-full">
                   Εγγραφή
                 </Button>
-              </SignUpButton>
+            <Waitlist />
 
               <SignInButton
                 mode="modal"
