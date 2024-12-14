@@ -39,11 +39,11 @@ export const ExitModal = () => {
           </div>
 
           <DialogTitle className="text-center text-2xl font-bold">
-            Wait, don&apos;t go!
+            Περίμενε μη φεύγεις!
           </DialogTitle>
 
           <DialogDescription className="text-center text-base">
-            You&apos;re about to leave the lesson. Are you sure?
+            Είσαι σίγουρος/η ότι θες να αφήσεις αυτό το μάθημα;
           </DialogDescription>
         </DialogHeader>
 
@@ -55,7 +55,7 @@ export const ExitModal = () => {
               size="lg"
               onClick={close}
             >
-              Keep learning
+              Συνέχισε να μαθαίνεις!
             </Button>
 
             <Button
@@ -67,7 +67,7 @@ export const ExitModal = () => {
                 router.push("/learn");
               }}
             >
-              End session
+              Ναι, είμαι σίγουρος/η!
             </Button>
           </div>
         </DialogFooter>
