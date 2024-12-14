@@ -2,7 +2,6 @@ import {
   ClerkLoaded,
   ClerkLoading,
   SignInButton,
-  SignUpButton,
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs";
@@ -31,15 +30,12 @@ export default function MarketingPage() {
 
           <ClerkLoaded>
             <SignedOut>
-              <SignUpButton
-                mode="modal"
-                afterSignInUrl="/learn"
-                afterSignUpUrl="/learn"
-              >
+              {/* Use a Link for Sign Up that redirects to the waitlist page */}
+              <Link href="https://measured-reptile-13.accounts.dev/waitlist">
                 <Button size="lg" variant="secondary" className="w-full">
                   Εγγραφή
                 </Button>
-              </SignUpButton>
+              </Link>
 
               <SignInButton
                 mode="modal"
@@ -47,7 +43,8 @@ export default function MarketingPage() {
                 afterSignUpUrl="/learn"
               >
                 <Button size="lg" variant="primaryOutline" className="w-full">
-Σύνδεση                 </Button>
+                  Σύνδεση
+                </Button>
               </SignInButton>
             </SignedOut>
 
