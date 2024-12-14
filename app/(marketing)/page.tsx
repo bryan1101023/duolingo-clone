@@ -53,7 +53,7 @@ export default function MarketingPage() {
 
             <SignedIn>
               <Button size="lg" variant="secondary" className="w-full" asChild>
-                <Link href="/learn">Καλωσήρθες, συνέχισε την προσπαθειά σου!</Link>
+                <Link href="/learn">Καλωσήρθες, συνέχισε!</Link>
               </Button>
             </SignedIn>
           </ClerkLoaded>
