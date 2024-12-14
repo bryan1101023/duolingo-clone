@@ -40,9 +40,9 @@ export const Header = () => {
                 afterSignUpUrl="/learn"
               >
                 <Button size="lg" variant="ghost">
-                  Login
+                  Μπες στην λίστα!
                 </Button>
-              </SignInButton>
+             <Waitlist />
             </SignedOut>
           </ClerkLoaded>
         </div>
