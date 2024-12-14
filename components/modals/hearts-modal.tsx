@@ -48,7 +48,7 @@ export const HeartsModal = () => {
           </DialogTitle>
 
           <DialogDescription className="text-center text-base">
-           Μπορείς να "αγοράσεις" lingohearts χρησιμοποιώντας την πρόοδο σου (XP) στο Κατάστημα
+            Μπορείς να &quot;αγοράσεις&quot; lingohearts χρησιμοποιώντας την πρόοδο σου (XP) στο Κατάστημα
           </DialogDescription>
         </DialogHeader>
 
@@ -69,7 +69,7 @@ export const HeartsModal = () => {
               size="lg"
               onClick={close}
             >
-            Όχι ευχαριστώ1
+              Όχι ευχαριστώ
             </Button>
           </div>
         </DialogFooter>
