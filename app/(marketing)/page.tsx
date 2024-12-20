@@ -4,6 +4,7 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
+  useUser,
 } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
@@ -20,7 +21,7 @@ export default function MarketingPage() {
 
       <div className="flex flex-col items-center gap-y-8">
         <h1 className="max-w-[480px] text-center text-xl font-bold text-neutral-600 lg:text-3xl">
-         Μάθε, εξάσκησε και βοήθησε τον εαυτό σου με το Lingo!
+          Μάθε, εξάσκησε και βοήθησε τον εαυτό σου με το Lingo!
         </h1>
 
         <div className="flex w-full max-w-[330px] flex-col items-center gap-y-3">
@@ -49,9 +50,7 @@ export default function MarketingPage() {
             </SignedOut>
 
             <SignedIn>
-              <Button size="lg" variant="secondary" className="w-full" asChild>
-                <Link href="/learn">Καλωσήρθες, συνέχισε!</Link>
-              </Button>
+              <UserStatusButton />
             </SignedIn>
           </ClerkLoaded>
         </div>
@@ -59,3 +58,27 @@ export default function MarketingPage() {
     </div>
   );
 }
+
+// Helper Component to Display Red Button for Banned Users
+function UserStatusButton() {
+  const { user } = useUser();
+
+  if (user?.username === "admin") {
+    return (
+      <Button
+        size="lg"
+        variant="destructive" // Assuming "destructive" renders a red button
+        className="w-full"
+      >
+        ACCOUNT IS BANNED FOR VIOLATING RULES
+      </Button>
+    );
+  }
+
+  return (
+    <Button size="lg" variant="secondary" className="w-full" asChild>
+      <Link href="/learn">Καλωσήρθες, συνέχισε!</Link>
+    </Button>
+  );
+}
+
