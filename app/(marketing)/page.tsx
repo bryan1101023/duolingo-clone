@@ -67,7 +67,7 @@ function UserStatusButton() {
     return (
       <Button
         size="lg"
-        variant="destructive" // Assuming "destructive" renders a red button
+        variant="danger" // Assuming "danger" renders a red button
         className="w-full"
       >
         ACCOUNT IS BANNED FOR VIOLATING RULES
